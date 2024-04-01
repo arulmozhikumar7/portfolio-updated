@@ -1,67 +1,112 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   return (
-    <section className=" body-font relative">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 ">
+    <section className="relative  body-font">
+      <motion.div
+        className="container px-5 py-24 mx-auto "
+        initial={{
+          opacity: 0,
+
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+          },
+        }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="flex flex-col w-full mb-12 text-center"
+          initial={{
+            opacity: 0,
+
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <h1 className="mb-4 text-2xl font-medium sm:text-3xl title-font ">
             Contact
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="mx-auto text-base leading-relaxed lg:w-2/3">
             Feel free to contact me. Lets make something awesome.
           </p>
-        </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+        </motion.div>
+        <motion.div
+          className="mx-auto lg:w-1/2 md:w-2/3"
+          initial={{
+            opacity: 0,
+
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <div className="flex flex-wrap -m-2">
-            <div className="p-2 w-1/2">
+            <div className="w-1/2 p-2">
               <div className="relative">
-                <label for="name" className="leading-7 text-sm ">
+                <label for="name" className="text-sm leading-7 ">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full  bg-opacity-50 rounded border    text-base outline-none  py-1 px-3 leading-8"
+                  className="w-full px-3 py-1 text-base leading-8 bg-opacity-50 border rounded outline-none"
                 />
               </div>
             </div>
-            <div className="p-2 w-1/2">
+            <div className="w-1/2 p-2">
               <div className="relative">
-                <label for="email" className="leading-7 text-sm ">
+                <label for="email" className="text-sm leading-7 ">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full  bg-opacity-50 rounded border    text-base outline-none  py-1 px-3 leading-8 "
+                  className="w-full px-3 py-1 text-base leading-8 bg-opacity-50 border rounded outline-none "
                 />
               </div>
             </div>
-            <div className="p-2 w-full">
+            <div className="w-full p-2">
               <div className="relative">
-                <label for="message" className="leading-7 text-sm ">
+                <label for="message" className="text-sm leading-7 ">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full  bg-opacity-50 rounded border  h-32 text-base outline-none  py-1 px-3 resize-none leading-6 "
+                  className="w-full h-32 px-3 py-1 text-base leading-6 bg-opacity-50 border rounded outline-none resize-none "
                 ></textarea>
               </div>
             </div>
-            <div className="p-2 w-full">
-              <button className="flex mx-auto btn-primary py-2 px-8 btn text-lg">
+            <div className="w-full p-2">
+              <button className="flex px-8 py-2 mx-auto text-lg btn-primary btn">
                 Submit
               </button>
             </div>
-            <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+            <div className="w-full p-2 pt-8 mt-8 text-center border-t border-gray-200">
               <a href="mailto:arulmozhikumar7@gmail.com">
                 arulmozhikumar7@gmail.com
               </a>
-              <p className="leading-normal my-5">
+              <p className="my-5 leading-normal">
                 Chennai
                 <br />
                 Tamilnadu , India
@@ -127,8 +172,8 @@ const Contact = () => {
               </span>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

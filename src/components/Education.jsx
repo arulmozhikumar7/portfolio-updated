@@ -1,15 +1,46 @@
 import React from "react";
+import { motion } from "framer-motion";
 import education from "../assets/education.png";
 const Education = () => {
   return (
     <>
-      <div className="flex justify-center items-center">
+      <motion.div
+        className="flex justify-center items-center "
+        initial={{
+          opacity: 0,
+
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+          },
+        }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-3xl p-3">Education</h2>
         <img src={education} alt="" className="w-8 h-8" />
-      </div>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      </motion.div>
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ml-3">
         <li>
-          <div className="timeline-middle">
+          <motion.div
+            className="timeline-middle"
+            initial={{
+              opacity: 0,
+
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -22,17 +53,47 @@ const Education = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
-          <div className="timeline-start md:text-end mb-10">
+          </motion.div>
+          <motion.div
+            className="timeline-start md:text-end mb-10"
+            initial={{
+              opacity: 0,
+
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <time className="font-mono italic">2019</time>
             <div className="text-lg font-black">10ᵗʰ (SSLC)</div>
             Sri Ramana Vidalaya , Rajapalayam
-          </div>
+          </motion.div>
           <hr />
         </li>
         <li>
           <hr />
-          <div className="timeline-middle">
+          <motion.div
+            className="timeline-middle"
+            initial={{
+              opacity: 0,
+
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -45,17 +106,47 @@ const Education = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
-          <div className="timeline-end mb-10">
+          </motion.div>
+          <motion.div
+            className="timeline-end mb-10"
+            initial={{
+              opacity: 0,
+
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <time className="font-mono italic">2021</time>
             <div className="text-lg font-black">12ᵗʰ (HSLC)</div>
             Sri Ramana Vidalaya , Rajapalayam
-          </div>
+          </motion.div>
           <hr />
         </li>
         <li>
           <hr />
-          <div className="timeline-middle">
+          <motion.div
+            className="timeline-middle"
+            initial={{
+              opacity: 0,
+
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -68,14 +159,29 @@ const Education = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
-          <div className="timeline-start md:text-end mb-10">
+          </motion.div>
+          <motion.div
+            className="timeline-start md:text-end mb-10"
+            initial={{
+              opacity: 0,
+
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <time className="font-mono italic">2025(Expected)</time>
             <div className="text-lg font-black">
               B.E (Computer Science Engineering)
             </div>
             Velammal Engineering College , Chennai
-          </div>
+          </motion.div>
         </li>
       </ul>
     </>

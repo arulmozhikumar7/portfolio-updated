@@ -28,7 +28,7 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-4 right-4 btn btn-primary text-white px-3 py-3 rounded-full flex items-center justify-center opacity-75 ${
+      className={`fixed bottom-4 right-4 btn btn-primary text-white px-3 py-3 rounded-full flex items-center justify-center opacity-50 ${
         isVisible ? "block" : "hidden"
       }`}
     >
@@ -42,6 +42,7 @@ const ScrollToTopButton = () => {
         viewBox="0 0 404 511.5"
         width="20"
         height="20"
+        fill="currentColor"
       >
         <path
           fill-rule="nonzero"

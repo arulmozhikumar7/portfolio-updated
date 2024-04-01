@@ -7,11 +7,7 @@ const Navbar = ({ toggleTheme }) => {
     {
       id: 2,
       label: "Projects",
-      submenu: [
-        { id: 4, label: "Newsletter Web App", to: "/Newsletter" },
-        { id: 5, label: "Pizza Ordering App", to: "/Pizza" },
-        { id: 6, label: "Expenses Tracker", to: "/Expenses" },
-      ],
+      to: "#Projects",
     },
     { id: 3, label: "Contact", to: "#Contact" },
   ];
@@ -23,7 +19,7 @@ const Navbar = ({ toggleTheme }) => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -62,12 +58,12 @@ const Navbar = ({ toggleTheme }) => {
             ))}
           </ul>
         </div>
-        <AnchorLink href="Home" className="btn btn-ghost text-xl">
+        <AnchorLink href="Home" className="text-xl btn btn-ghost">
           Arulmozhikumar
         </AnchorLink>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="hidden navbar-center lg:flex">
+        <ul className="px-1 menu menu-horizontal">
           {items.map((item) => (
             <li key={item.id}>
               {item.submenu ? (
